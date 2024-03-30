@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        label, input, select, button {
+            margin-bottom: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <form action="/submit" method="post">
+
+        <!-- INPUT TEXT -->
+        <label for="text-input">Текстове поле:</label>
+        <input type="text" id="text-input" name="text-input" required>
+        <br>
+        
+
+        <!-- TEXTAREA -->
+        <label for="textarea">Текстова область:</label>
+        <textarea id="textarea" name="textarea" rows="4" cols="50" required></textarea>
+        <br>
+
+        <!-- SELECT -->
+        <label for="select">Випадаючий список:</label>
+        <select id="select" name="select" required>
+            <option value="option1">Опція 1</option>
+            <option value="option2">Опція 2</option>
+        </select>
+        <br>
+
+        <!-- CHECKBOX -->
+        <label for="checkbox">Checkbox:</label>
+        <input type="checkbox" id="checkbox" name="checkbox">
+        <br>
+
+        <!-- RADIO BUTTON -->
+        <label>Радіо-кнопки:</label>
+        <input type="radio" id="radio1" name="radio" value="option1">
+        <label for="radio1">Опція 1</label>
+        <input type="radio" id="radio2" name="radio" value="option2">
+        <label for="radio2">Опція 2</label>
+        <br>
+
+        <!-- BUTTON -->
+        <button type="button">Звичайна кнопка</button>
+        <br>
+
+        <!-- PASSWORD -->
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <!-- FILE -->
+        <label for="file">Виберіть файл:</label>
+        <input type="file" id="file" name="file" accept=".txt, .pdf" required>
+        <br>
+
+        <!-- SUBMIT BUTTON -->
+        <input type="submit" value="Відправити">
+
+    </form>
+
+</body>
+</html>

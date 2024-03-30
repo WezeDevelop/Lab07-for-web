@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        body {
+            background-color: #f4f4f4; /* Колір фону */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #71fdff; /* Колір фону форми */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 70%; /* Ширина форми */
+            max-width: 600px; /* Максимальна ширина форми */
+            margin: 0 auto; /* Центрування форми */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-collapse: collapse;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        label, input, select {
+            width: 45%; 
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        .interests-container {
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .interests-container input {
+            width: 100%; 
+            margin: 10px 10px; 
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .buttons {
+            background-color: #25A6A6;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: .4s ease-in;
+        }
+
+        .buttons:hover {
+            background-color: #85ffff;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Анкета</h1>
+        <label for="name,last name">Ім'я, Прізвище:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="surname">По батькові:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="birthdate">Дата народження:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="address">Домашня адреса:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="workplace">Місце навчання:</label>
+        <input type="text" id="workplace" name="workplace" required>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Домашня почта:</label>
+        <input type="email" id="email" name="email" required>
+
+        <div class="interests-container">
+            <label for="interests">Область наукових інтересів:</label>
+            <input type="text" id="interest1" name="interests[]" required>
+            <input type="text" id="interest2" name="interests[]" required>
+            <input type="text" id="interest3" name="interests[]" required>
+        </div>
+
+        <div class="button-container">
+            <input class="buttons" type="submit" value="Відправити дані">
+            <input class="buttons" type="button" value="Відмінити введення">
+        </div>
+    </form>
+
+</body>
+</html>
